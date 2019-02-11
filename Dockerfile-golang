@@ -3,6 +3,7 @@ FROM golang:latest as builder
 RUN mkdir /app
 ENV GOPATH /app
 
+# your deps as needed
 RUN go get -u gopkg.in/mgo.v2 \
     && go get -u github.com/gin-gonic/gin \ 
     && go get -u gopkg.in/check.v1 \
